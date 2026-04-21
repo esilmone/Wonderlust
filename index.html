@@ -254,66 +254,66 @@
     <footer>
         <section id="contact-us">
             <h2>Contact Us <span id="required">(*required)</span></h2>
-            
-                <div>
-                    <label>First Name<span>*</span></label>
-                    <input>
-                </div>
-                <div>
-                    <label>Last Name<span>*</span></label>
-                    <input>
-                </div>
-                <div>
-                    <label>Email<span>*</span></label>
-                    <input>
-                </div>
-                <div>
-                    <label>Phone<span>*</span></label>
-                    <input>
-                </div>
-                <fieldset id="preferred-contact">
-                <legend>Preferred Contact Method<span>*</span></legend>
-                    <div> 
-                        <input>
-                        <label>Email</label>
+                <form action="https://wp.zybooks.com/form-viewer.php" method="post">
+                    <div>
+                        <label for="fName">First Name<span>*</span></label>
+                        <input type=text id="fName" required>
                     </div>
                     <div>
-                        <input>
-                        <label>Text</label>
+                        <label for lName>Last Name<span>*</span></label>
+                        <input type=text id="lName" required>
                     </div>
                     <div>
-                        <input>
-                        <label>Phone</label>
+                        <label for="email">Email<span>*</span></label>
+                        <input type=email id="email" required>
                     </div>
-                </fieldset>
-                <fieldset id="destination">
-                    <legend>Destination<span>*</span></legend>
-                    <select id="select-destination">
-                        <option>Choose</option>
-                        <option>Barcelona</option>
-                        <option>Granada</option>
-                        <option>Ibiza</option>
-                        <option>Madrid</option>
-                        <option>Majorca</option>
-                        <option>Seville</option>
-                        <option>Tenerife</option>
-                        <option>Valencia</option>
-                        <option>Other</option>
-                    </select>
-                </fieldset>
-                <fieldset id="travelTime">
-                    <legend>Travel Time<span>*</span></legend>
-                    <select id="select-travel-time">
-                        <option>Choose</option>
-                        <option>Fall</option>
-                        <option>Winter</option>
-                        <option>Spring</option>
-                        <option>Summer</option>
-                        <option>Flexible</option>
-                    </select>
-                </fieldset>
-                <input>
-            
+                    <div>
+                        <label for="phoneNum">Phone<span>*</span></label>
+                        <input type=tel id="phoneNum" required>
+                    </div>
+                    <fieldset id="preferred-contact">
+                    <legend>Preferred Contact Method<span>*</span></legend>
+                        <div> 
+                            <input type="radio" id="emailRadio" name="choice" required>
+                            <label for="emailRadio">Email</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="textRadio" name="choice" required>
+                            <label for="textRadio">Text</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="phoneRadio" name="choice" required>
+                            <label for="phoneRadio">Phone</label>
+                        </div>
+                    </fieldset>
+                    <fieldset id="destination">
+                        <legend for="select-destination">Destination<span>*</span></legend>
+                        <select id="select-destination" required>
+                            <option>Choose</option>
+                            <option>Barcelona</option>
+                            <option>Granada</option>
+                            <option>Ibiza</option>
+                            <option>Madrid</option>
+                            <option>Majorca</option>
+                            <option>Seville</option>
+                            <option>Tenerife</option>
+                            <option>Valencia</option>
+                            <option>Other</option>
+                        </select>
+                    </fieldset>
+                    <fieldset id="travelTime" required>
+                        <legend for="travelTime">Travel Time<span>*</span></legend>
+                        <select id="select-travel-time">
+                            <option>Choose</option>
+                            <option>Fall</option>
+                            <option>Winter</option>
+                            <option>Spring</option>
+                            <option>Summer</option>
+                            <option>Flexible</option>
+                        </select>
+                    </fieldset>
+                    <input type="submit" id="submit">
+                </form>
         </section>
         <section id="legal">
             <h2>Legal</h2>
